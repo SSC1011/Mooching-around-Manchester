@@ -66,11 +66,11 @@ markerCTTwo.bindPopup("<h3>China Town - Band on the Wall</h3>").openPopup();
 
 const popup = L.popup();
 
-function onMouseOver(e) {
+function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
-        .setContent("You hoovered your mouse over " + e.latlng.toString())
+        .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
 }
 
-map.on('mouseOver', onMouseOver);
+map.on('click', onMapClick);
